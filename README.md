@@ -7,7 +7,7 @@ Ez egy full-stack tesztfeladat, amely egy teve-nyilvántartó rendszert valósí
 - **Dinamikus Adatok**: Tevék nevének, púpszámának és színének kezelése.
 - **Validáció**: Reactive Forms alapú validáció frontend oldalon (név min. 3 karakter, púpok száma 1-2), modellszintű validáció és típusbiztosítás backend oldalon.
 - **Vizuális visszajelzés**: Bootstrap alapú reszponzív felület hibaüzenetekkel és validációs kiemelésekkel.
-- - **Etetés (Extra funkció)**: "Etetés" gomb, amely azonnal frissíti az adott teve utolsó etetési időpontját a táblázatban (és az adatbázisban).
+- **Etetés (Extra funkció)**: "Etetés" gomb, amely azonnal frissíti az adott teve utolsó etetési időpontját a táblázatban (és az adatbázisban).
 
 ## 2. Alkalmazott Technológiák
 
