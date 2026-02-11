@@ -53,7 +53,7 @@ A frontend biztosítja a felhasználói felületet.
 ```bash
 ng serve
 ```
-4. Nyisd meg a böngészőt a következő címen: `http://localhost:4200`
+4. Nyisd meg a böngészőt a következő címen: http://localhost:4200
 
 ## 4. Tesztelés
 - Backend: Futtasd a `dotnet test` (xUnit) parancsot a Backend mappájában az automatizált xUnit tesztek futtatásához.
