@@ -1,0 +1,42 @@
+<div class="card shadow-sm">
+  <div class="card-header" [class.bg-warning]="isEditMode" [class.bg-primary]="!isEditMode">
+    <h4 class="text-white mb-0">{{ isEditMode ? 'Teve módosítása' : 'Új teve rögzítése' }}</h4>
+  </div>
+  <div class="card-body">
+    <form [formGroup]="camelForm" (ngSubmit)="onSubmit()">
+      
+      <div class="mb-3">
+        <label class="form-label">Teve neve</label>
+        <input type="text" formControlName="name" class="form-control"
+               [class.is-invalid]="camelForm.get('name')?.invalid && camelForm.get('name')?.touched">
+        <div class="invalid-feedback">Minimum 3 karakter szükséges!</div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Púpok száma</label>
+        <select formControlName="humpCount" class="form-select">
+          <option [ngValue]="1">1 púp (Dromedár)</option>
+          <option [ngValue]="2">2 púp (Baktrián)</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Szín</label>
+        <select formControlName="color" class="form-select">
+          @for (c of colors; track c) {
+            <option [value]="c">{{ c }}</option>
+          }
+        </select>
+      </div>
+
+      <div class="d-grid gap-2">
+        <button type="submit" class="btn btn-success" [disabled]="camelForm.invalid">
+          {{ isEditMode ? 'Változtatások mentése' : 'Teve hozzáadása' }}
+        </button>
+        @if (isEditMode) {
+          <button type="button" class="btn btn-outline-secondary" (click)="resetForm()">Mégse</button>
+        }
+      </div>
+    </form>
+  </div>
+</div>
